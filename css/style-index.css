@@ -1,0 +1,69 @@
+/*Configuração geral da página*/
+body {
+    font-family: 'Fragment Mono', monospace;
+    background: linear-gradient(90deg, #151617, #060b0c , #191e1f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+/*Topo da página*/
+
+.topoPagina {
+    color: #A4D5E6;
+    text-align: center;
+    
+}
+
+.imagemTexto {
+
+}
+
+.imgTopo {
+    border-radius: 50%;
+    border: 4px solid #6FD9F0;
+    box-shadow: 2px 2px 2px #E8E8E8;
+}
+
+/*Corpo principal da página*/
+.corpoPrincipal {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 24px 0;
+}
+
+.linkBotao {
+    background-color: silver;
+    color: #000000;
+    padding: 12px;
+    text-align: center;
+    margin: 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.linkBotao:hover {
+    background: linear-gradient(90deg, #151617, #060b0c , #191e1f);
+    color: silver;
+    transition: 0.6s;
+    border: 1px solid #ffffff;
+}
+
+/*Rodapé da página*/
+.rodapePagina {
+    background: linear-gradient(180deg, #A4D5E6, #6FD9F0 , #00BEDB);
+    color: #000000;
+    width: 100%;
+    position: fixed bottom;
+    
+}
+
+.textoFooter {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
