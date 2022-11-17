@@ -1,7 +1,7 @@
 /*Configuração geral da página*/
 body {
     font-family: 'Fragment Mono', monospace;
-    background: linear-gradient(90deg, #151617, #060b0c , #191e1f);
+    background: linear-gradient(90deg, #151617, #060b0c, #191e1f);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,14 +12,13 @@ body {
 /*Topo da página*/
 
 .topoPagina {
+    font-family: 'Fragment Mono', monospace;
     color: #A4D5E6;
     text-align: center;
-    
+    padding: 24px;
 }
 
-.imagemTexto {
-
-}
+.imagemTexto {}
 
 .imgTopo {
     border-radius: 50%;
@@ -27,42 +26,345 @@ body {
     box-shadow: 2px 2px 2px #E8E8E8;
 }
 
+
+
+
 /*Corpo principal da página*/
 .corpoPrincipal {
+    padding: 24px;
     display: flex;
     flex-direction: column;
     margin: 24px 0 24px 0;
 }
 
 .linkBotao {
-    background-color: silver;
-    color: #000000;
-    padding: 12px;
-    text-align: center;
-    margin: 6px;
-    border-radius: 8px;
     text-decoration: none;
-    border: 1px solid black;
+    color: #ffffff;
+    font-family: 'Fragment Mono', monospace;
 }
 
-.linkBotao:hover {
-    background: linear-gradient(90deg, #151617, #060b0c , #191e1f);
-    color: silver;
-    transition: 0.6s;
-    border: 1px solid #ffffff;
+
+/*Seção dos botões*/
+
+.container-botao {
+    margin: 8px;
 }
+
+.botao-linkedin {
+    background-color: #191e1f;
+    transition: all 0.5s;
+    position: relative;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    width: 400px;
+}
+
+.botao-linkedin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #00BEDB;
+    transition: all 0.3s;
+}
+
+.botao-linkedin:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.botao-linkedin::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid #0A66C2;
+    transform: scale(1.3, 1.3);
+}
+
+.botao-linkedin:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+
+/**/
+/*Botão LinkedIn*/
+/**/
+.botao {
+    background-color: #191e1f;
+    transition: all 0.5s;
+    position: relative;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    width: 400px;
+}
+
+.botao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #00BEDB;
+    transition: all 0.3s;
+}
+
+.botao:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.botao::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid #00BEDB;
+    transform: scale(1.3, 1.3);
+}
+
+.botao:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+
+/**/
+/*Botão Instagram*/
+/**/
+.botao-instagram {
+    background-color: #191e1f;
+    transition: all 0.5s;
+    position: relative;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    width: 400px;
+    color: #ffffff;
+}
+
+.botao-instagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #00BEDB;
+    transition: all 0.3s;
+}
+
+.botao-instagram:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.botao-instagram::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: scale(1.3, 1.3);
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    color: #ffffff;
+    border-image-source: linear-gradient(to left, #743ad5, #8134af, #d53a9d, #feda77, #f58529);
+}
+
+.botao-instagram:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+    color: #ffffff;
+}
+
+/**/
+/*Botão Meus Projetos*/
+/**/
+.botao-projetos {
+    background-color: #191e1f;
+    transition: all 0.5s;
+    position: relative;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    width: 400px;
+}
+
+.botao-projetos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #00BEDB;
+    transition: all 0.3s;
+}
+
+.botao-projetos:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.botao-projetos::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid #00BEDB;
+    transform: scale(1.3, 1.3);
+}
+
+.botao-projetos:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+/**/
+/*Botão e-mail*/
+/**/
+.botao-email {
+    background-color: #191e1f;
+    transition: all 0.5s;
+    position: relative;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    width: 400px;
+}
+
+.botao-email::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #00BEDB;
+    transition: all 0.3s;
+}
+
+.botao-email:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.botao-email::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid #FF0000;
+    transform: scale(1.3, 1.3);
+}
+
+.botao-email:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+/**/
+/*Botão WhatsApp*/
+/**/
+
+.botao-whatsapp {
+    background-color: #191e1f;
+    transition: all 0.5s;
+    position: relative;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    width: 400px;
+}
+
+.botao-whatsapp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+.botao-whatsapp:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+    color: #ffffff;
+}
+
+.botao-whatsapp::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid #25d366;
+    transform: scale(1.3, 1.3);
+    color: #ffffff;
+
+}
+
+.botao-whatsapp:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+    color: #ffffff;
+}
+
 
 /*Rodapé da página*/
 .rodapePagina {
-    background: linear-gradient(180deg, #A4D5E6, #6FD9F0 , #00BEDB);
-    color: #000000;
+    color: #00BEDB;
     width: 100%;
     position: fixed bottom;
-    
 }
 
 .textoFooter {
-    font-size: 12px;
+    font-family: 'Fragment Mono', monospace;
+    font-size: 16px;
     display: flex;
     flex-direction: row;
     justify-content: center;
