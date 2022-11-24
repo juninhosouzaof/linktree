@@ -1,13 +1,28 @@
 /*Configuração geral da página*/
 body {
     font-family: 'Fragment Mono', monospace;
-    background: linear-gradient(90deg, #151617, #060b0c, #191e1f);
+    background: linear-gradient(-45deg, #292a2b, #060b0c, #191e1f, #000000, #252728);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 0;
+    animation: Gradiente 10s ease infinite;
+    background-size: 400% 400%;
 }
+
+@keyframes Gradiente {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
 
 /*Topo da página*/
 
