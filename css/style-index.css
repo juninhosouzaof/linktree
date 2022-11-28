@@ -1,4 +1,5 @@
 /*Configuração geral da página*/
+
 body {
     font-family: 'Fragment Mono', monospace;
     background: linear-gradient(-45deg, #292a2b, #060b0c, #191e1f, #000000, #252728);
@@ -7,7 +8,7 @@ body {
     align-items: center;
     width: 100%;
     margin: 0;
-    animation: Gradiente 10s ease infinite;
+    animation: Gradiente 30s ease infinite;
     background-size: 400% 400%;
 }
 
@@ -24,32 +25,55 @@ body {
 }
 
 
+/*Barra de rolagem do site*/
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #191e1f;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #00BEDB;
+    border-radius: 24px;
+}
+
+
 /*Topo da página*/
 
 .topoPagina {
     font-family: 'Fragment Mono', monospace;
-    color: #A4D5E6;
+    color: #00BEDB;
     text-align: center;
-    padding: 24px;
+    padding: 8px;
 }
 
-.imagemTexto {}
+.imagemTexto {
+    margin: 8px;
+}
 
 .imgTopo {
     border-radius: 50%;
-    border: 4px solid #6FD9F0;
+    border: 4px solid #00BEDB;
     box-shadow: 2px 2px 2px #E8E8E8;
+    width: 180px;
+}
+
+.tituloTopo {
+    margin: 16px;
 }
 
 
-
-
 /*Corpo principal da página*/
+
 .corpoPrincipal {
-    padding: 24px;
+    padding: 8px;
     display: flex;
     flex-direction: column;
-    margin: 24px 0 24px 0;
+    margin: 16px 0 24px 0;
+    align-items: center;
 }
 
 .linkBotao {
@@ -62,17 +86,26 @@ body {
 /*Seção dos botões*/
 
 .container-botao {
-    margin: 8px;
+    margin: 16px;
 }
 
 .botao-linkedin {
-    background-color: #191e1f;
+    text-decoration: none;
+    color: rgb(108, 107, 107);
+    font-family: 'Fragment Mono', monospace;
     transition: all 0.5s;
     position: relative;
-    padding: 12px;
     text-align: center;
     cursor: pointer;
     width: 400px;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-linkedin:hover {
+    color: #0A66C2;
+    background: #ffffff;
 }
 
 .botao-linkedin::before {
@@ -114,8 +147,13 @@ body {
 
 
 /**/
+
+
 /*Botão LinkedIn*/
+
+
 /**/
+
 .botao {
     background-color: #191e1f;
     transition: all 0.5s;
@@ -164,17 +202,25 @@ body {
 
 
 /**/
+
+
 /*Botão Instagram*/
+
+
 /**/
+
 .botao-instagram {
-    background-color: #191e1f;
+    text-decoration: none;
+    color: rgb(108, 107, 107);
+    font-family: 'Fragment Mono', monospace;
     transition: all 0.5s;
     position: relative;
-    padding: 12px;
     text-align: center;
     cursor: pointer;
     width: 400px;
-    color: #ffffff;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
 }
 
 .botao-instagram::before {
@@ -189,11 +235,16 @@ body {
     transition: all 0.3s;
 }
 
+.botao-instagram:hover {
+    color: #ffffff;
+    background: linear-gradient(to left, #743ad5, #8134af, #d53a9d, #feda77, #f58529);
+}
+
 .botao-instagram:hover::before {
     opacity: 0;
     transform: scale(0.5, 0.5);
-    background: linear-gradient(to left, #743ad5, #8134af, #d53a9d, #feda77, #f58529);;
-
+    background: linear-gradient(to left, #743ad5, #8134af, #d53a9d, #feda77, #f58529);
+    ;
 }
 
 .botao-instagram::after {
@@ -220,17 +271,97 @@ body {
     color: #ffffff;
 }
 
+
 /**/
-/*Botão Meus Projetos*/
+
+
+/*Botão Github*/
+
+
 /**/
-.botao-projetos {
-    background-color: #191e1f;
+
+.botao-github {
+    text-decoration: none;
+    color: rgb(108, 107, 107);
+    font-family: 'Fragment Mono', monospace;
     transition: all 0.5s;
     position: relative;
-    padding: 12px;
     text-align: center;
     cursor: pointer;
     width: 400px;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-github:hover {
+    color: silver;
+    background: #171515;
+}
+
+.botao-github::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #171515;
+    transition: all 0.3s;
+}
+
+.botao-github:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+    background: #171515;
+}
+
+.botao-github::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid silver;
+    transform: scale(1.3, 1.3);
+}
+
+.botao-github:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+
+/**/
+
+
+/*Botão Meus Projetos*/
+
+
+/**/
+
+.botao-projetos {
+    text-decoration: none;
+    color: rgb(108, 107, 107);
+    font-family: 'Fragment Mono', monospace;
+    transition: all 0.5s;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    width: 400px;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-projetos:hover {
+    color: #ffffff;
+    background: #00BEDB;
 }
 
 .botao-projetos::before {
@@ -270,17 +401,32 @@ body {
     transform: scale(1, 1);
 }
 
+
 /**/
+
+
 /*Botão e-mail*/
+
+
 /**/
+
 .botao-email {
-    background-color: #191e1f;
+    text-decoration: none;
+    color: rgb(108, 107, 107);
+    font-family: 'Fragment Mono', monospace;
     transition: all 0.5s;
     position: relative;
-    padding: 12px;
     text-align: center;
     cursor: pointer;
     width: 400px;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-email:hover {
+    color: #FF0000;
+    background: #191e1f;
 }
 
 .botao-email::before {
@@ -320,18 +466,32 @@ body {
     transform: scale(1, 1);
 }
 
+
 /**/
+
+
 /*Botão WhatsApp*/
+
+
 /**/
 
 .botao-whatsapp {
-    background-color: #191e1f;
+    text-decoration: none;
+    color: rgb(108, 107, 107);
+    font-family: 'Fragment Mono', monospace;
     transition: all 0.5s;
     position: relative;
-    padding: 12px;
     text-align: center;
     cursor: pointer;
     width: 400px;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-whatsapp:hover {
+    color: #ffffff;
+    background: #25d366;
 }
 
 .botao-whatsapp::before {
@@ -365,7 +525,6 @@ body {
     border: 1px solid #25d366;
     transform: scale(1.3, 1.3);
     color: #ffffff;
-
 }
 
 .botao-whatsapp:hover::after {
@@ -376,6 +535,7 @@ body {
 
 
 /*Rodapé da página*/
+
 .rodapePagina {
     color: #00BEDB;
     width: 100%;
